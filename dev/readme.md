@@ -16,7 +16,7 @@ Building the library
 
 Running the tool  
 
-    go install local/squirrel-page-builder && $GOPATH/bin/squirrel-page-builder
+    rake run
 
 Cleanup  
 
