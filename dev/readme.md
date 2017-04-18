@@ -6,7 +6,7 @@
 
 Set the `GOPATH`  
 
-    export GOPATH=$PWD
+    rake env
 
 ## Generating a manifest  
 
