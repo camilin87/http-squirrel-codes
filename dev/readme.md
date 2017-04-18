@@ -2,6 +2,8 @@
 
 ## Prerequisites  
 
+- Go
+
 Set the `GOPATH`  
 
     export GOPATH=$PWD
