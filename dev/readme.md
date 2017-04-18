@@ -20,7 +20,7 @@ Running the tool
 
 Cleanup  
 
-    rm -Rf pkg bin
+    rake clean
 
 TODO
 
