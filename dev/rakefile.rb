@@ -38,6 +38,12 @@ end
 
 task :generate do
     input_file = File.join(pwd, "squirrels-source.md")
-    output_directory = File.expand_path("..", pwd)
+    site_root = File.expand_path("..", pwd)
+
+    output_directory = File.join(site_root, "_pages/")
+
+    `rm -Rf #{output_directory}`
+    Dir.mkdir output_directory
+
     generate(input_file, output_directory)
 end
