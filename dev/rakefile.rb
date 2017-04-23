@@ -1,5 +1,7 @@
 require "tmpdir"
 
+task :default => [:generate]
+
 task :t => [:test_unit, :test_integration]
 
 task :test_unit do
@@ -7,7 +9,11 @@ task :test_unit do
 end
 
 def pwd
-    File.dirname(__FILE__)
+    Dir.pwd
+end
+
+def generate(input_file, output_directory)
+    sh "ruby generate.rb \"#{input_file}\" \"#{output_directory}\""
 end
 
 task :test_integration do
@@ -17,7 +23,7 @@ task :test_integration do
         input_file = File.join(pwd, "spec/seed/sample-definition.md")
         puts "input_file: #{input_file}"
 
-        sh "ruby generate.rb \"#{input_file}\" \"#{temp_dir}\""
+        generate(input_file, temp_dir)
 
         Dir.chdir(temp_dir) {
             found_files = Dir["*"].sort
@@ -28,4 +34,10 @@ task :test_integration do
              end
         }
     }
+end
+
+task :generate do
+    input_file = File.join(pwd, "squirrels-source.md")
+    output_directory = File.expand_path("..", pwd)
+    generate(input_file, output_directory)
 end

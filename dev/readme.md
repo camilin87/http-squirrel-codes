@@ -7,3 +7,7 @@
 ## Running the tests  
 
     rake t
+
+## Generating the site  
+
+    rake
