@@ -11,8 +11,6 @@ def pwd
 end
 
 task :test_integration do
-    puts "running integration tests"
-
     Dir.mktmpdir { |temp_dir|
         puts "temp_dir: #{temp_dir}"
 
