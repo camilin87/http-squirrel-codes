@@ -1,5 +1,7 @@
 class StatusCodeInfo
-
+    attr_accessor :code
+    attr_accessor :description
+    attr_accessor :url
 end
 
 class Parser
@@ -7,16 +9,18 @@ class Parser
         markdown = markdown || ""
         markdown = markdown.strip
 
-        if markdown == ""
+        m = /^\!\[(\d+)\s\-\s(.+)\]\((.+)\)$/.match(markdown)
+        if m == nil
             return []
         end
 
-        if not markdown.start_with? "!"
-            return []
-        end
+        data = m.captures
 
-        [
-            StatusCodeInfo.new()
-        ]
+        r = StatusCodeInfo.new
+        r.code = data[0].to_i
+        r.description = data[1]
+        r.url = data[2]
+
+        return [r]
     end
 end
