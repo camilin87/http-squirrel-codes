@@ -11,7 +11,10 @@ task :env do
     sh "go env GOPATH"
 end
 
-task :run => [:env] do
+task :build => [:env] do
     sh "go install local/squirrel-page-builder"
+end
+
+task :run => [:build] do
     sh "$GOPATH/bin/squirrel-page-builder"
 end
