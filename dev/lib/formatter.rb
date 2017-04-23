@@ -6,8 +6,7 @@ layout: page
 title: #{status_code_info.full_name}
 permalink: /#{status_code_info.code}/
 ---
-
-<img src="#{status_code_info.url}" alt="#{status_code_info.full_name}" />
+![#{status_code_info.full_name}](#{status_code_info.url})  
 }
     end
 end

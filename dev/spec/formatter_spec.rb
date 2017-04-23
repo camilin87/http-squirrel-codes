@@ -10,8 +10,7 @@ layout: page
 title: 725 - It works on my machine
 permalink: /725/
 ---
-
-<img src="http://tddapps.com/logo.png" alt="725 - It works on my machine" />
+![725 - It works on my machine](http://tddapps.com/logo.png)  
 }
 
         output = Formatter.format(input)
