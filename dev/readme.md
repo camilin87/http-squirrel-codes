@@ -1,8 +1,8 @@
 # Development flow  
 
 ## Prerequisites  
-- rspec
-- rake
+
+    bundle install
 
 ## Running the tests  
 
