@@ -12,6 +12,11 @@ def pwd
     Dir.pwd
 end
 
+def output_directory
+    site_root = File.expand_path("..", pwd)
+    File.join(site_root, "_pages/")
+end
+
 def generate(input_file, output_directory)
     sh "ruby generate.rb \"#{input_file}\" \"#{output_directory}\""
 end
@@ -36,14 +41,12 @@ task :test_integration do
     }
 end
 
-task :generate do
-    input_file = File.join(pwd, "squirrels-source.md")
-    site_root = File.expand_path("..", pwd)
-
-    output_directory = File.join(site_root, "_pages/")
-
+task :clean do
     `rm -Rf #{output_directory}`
     Dir.mkdir output_directory
+end
 
+task :generate => [:clean] do
+    input_file = File.join(pwd, "squirrels-source.md")
     generate(input_file, output_directory)
 end
