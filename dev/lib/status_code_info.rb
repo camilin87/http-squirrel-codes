@@ -8,4 +8,12 @@ class StatusCodeInfo
         @description = description
         @url = url
     end
+
+    def full_name
+        "#{@code} - #{@description}"
+    end
+
+    def filename
+        "#{code}.html"
+    end
 end
