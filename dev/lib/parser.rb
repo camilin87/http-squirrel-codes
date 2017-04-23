@@ -12,6 +12,13 @@ end
 
 class Parser
     def self.parse(markdown)
+        result = Parser.parse_internal markdown
+        puts "Action=Parse, Count=#{result.length}"
+        result
+    end
+
+    private
+    def self.parse_internal(markdown)
         (markdown || "")
             .lines
             .map { |l| /^\!\[(\d+)\s\-\s(.+)\]\((.+)\)\s\s$/.match l }
