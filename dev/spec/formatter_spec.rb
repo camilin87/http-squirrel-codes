@@ -5,8 +5,6 @@ describe Formatter do
     it "properly formats the status code info" do
         input = StatusCodeInfo.new(725, "It works on my machine", "http://tddapps.com/logo.png")
         expected = %{---
-type: page
-layout: page
 title: 725 - It works on my machine
 permalink: /725/
 ---
