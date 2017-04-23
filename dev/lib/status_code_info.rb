@@ -14,6 +14,6 @@ class StatusCodeInfo
     end
 
     def filename
-        "#{code}.html"
+        "#{code}.md"
     end
 end
