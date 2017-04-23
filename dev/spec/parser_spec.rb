@@ -1,3 +1,4 @@
+require "status_code_info"
 require "parser"
 
 describe Parser do
