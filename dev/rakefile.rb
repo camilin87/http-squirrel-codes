@@ -18,5 +18,16 @@ task :test_integration do
 
         input_file = File.join(pwd, "spec/seed/sample-definition.md")
         puts "input_file: #{input_file}"
+
+        sh "ruby generate.rb \"#{input_file}\" \"#{temp_dir}\""
+
+        Dir.chdir(temp_dir) {
+            found_files = Dir["*"].sort
+            expected_files = ["100.html", "101.html"]
+
+             if found_files != expected_files
+                raise "Generation did not produce the expected result, found_files: #{found_files}"
+             end
+        }
     }
 end
