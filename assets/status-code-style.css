@@ -1,5 +1,5 @@
 body {
-    background-color: grey;
+    background-color: #333;
     color: white;
     text-align: center;
 }
@@ -32,4 +32,10 @@ body > div {
     border-color: white;
     border-style: solid;
     border-width: 2px;
+
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+
+    margin-top: 5%;
 }
