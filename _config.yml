@@ -33,6 +33,8 @@ exclude:
   - dev
   - Gemfile
   - Gemfile.lock
+  - README.md
+  - readme-dev.md
 include: ['_pages']
 defaults:
     -
