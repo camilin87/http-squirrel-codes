@@ -8,6 +8,7 @@ describe Formatter do
 title: 725 - It works on my machine
 permalink: /725/
 ---
+\# 725 - It works on my machine  
 ![725 - It works on my machine](http://tddapps.com/logo.png)  
 }
 

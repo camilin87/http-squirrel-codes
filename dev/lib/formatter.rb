@@ -4,6 +4,7 @@ class Formatter
 title: #{status_code_info.full_name}
 permalink: /#{status_code_info.code}/
 ---
+\# #{status_code_info.full_name}  
 ![#{status_code_info.full_name}](#{status_code_info.url})  
 }
     end
