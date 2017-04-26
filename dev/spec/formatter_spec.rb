@@ -8,9 +8,11 @@ describe Formatter do
 title: 725 - It works on my machine
 permalink: /725/
 ---
-![725 - It works on my machine](http://tddapps.com/logo.png)  
-\# 725  
-\#\# It works on my machine  
+<div>
+    <img src="http://tddapps.com/logo.png" alt="725 - It works on my machine" />
+    <h1>725</h1>
+    <h2>It works on my machine</h2>
+</div>
 }
 
         output = Formatter.format(input)
