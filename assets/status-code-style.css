@@ -4,6 +4,23 @@ body {
     text-align: center;
 }
 
+body > div {
+    background-color: black;
+    padding: 2em;
+    width: 60%;
+
+    border-color: white;
+    border-style: solid;
+    border-width: 2px;
+
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
 img {
     width: 90%;
     background: white;
@@ -23,20 +40,4 @@ h2 {
     font-size: medium;
     margin-top: 0;
     margin-bottom: 0;
-}
-
-body > div {
-    background-color: black;
-    padding: 2em;
-    width: 60%;
-
-    border-color: white;
-    border-style: solid;
-    border-width: 2px;
-
-    float: none;
-    margin-left: auto;
-    margin-right: auto;
-
-    margin-top: 5%;
 }
