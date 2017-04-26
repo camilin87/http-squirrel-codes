@@ -10,4 +10,10 @@ img {
 
 h1 {
     font-family: initial;
+    font-size: 4em;
+}
+
+h2 {
+    font-weight: 300;
+    font-size: medium;
 }
