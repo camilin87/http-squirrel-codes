@@ -32,7 +32,7 @@ task :test_integration do
 
         Dir.chdir(temp_dir) {
             found_files = Dir["*"].sort
-            expected_files = ["100.html", "101.html"]
+            expected_files = ["100.md", "101.md"]
 
              if found_files != expected_files
                 raise "Generation did not produce the expected result, found_files: #{found_files}"
