@@ -11,9 +11,12 @@ img {
 h1 {
     font-family: initial;
     font-size: 4em;
+    margin-bottom: auto;
 }
 
 h2 {
     font-weight: 300;
     font-size: medium;
+    margin-top: 0;
+    margin-bottom: 0;
 }
