@@ -6,6 +6,8 @@ body {
 
 img {
     width: 40%;
+    background: white;
+    padding: 2px;
 }
 
 h1 {
