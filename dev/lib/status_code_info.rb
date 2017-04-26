@@ -10,7 +10,7 @@ class StatusCodeInfo
     end
 
     def full_name
-        "#{@code} - #{@description}"
+        "#{@code} #{@description}"
     end
 
     def filename

@@ -5,11 +5,11 @@ describe Formatter do
     it "properly formats the status code info" do
         input = StatusCodeInfo.new(725, "It works on my machine", "http://tddapps.com/logo.png")
         expected = %{---
-title: 725 - It works on my machine
+title: 725 It works on my machine
 permalink: /725
 ---
 <div>
-    <img src="http://tddapps.com/logo.png" alt="725 - It works on my machine" />
+    <img src="http://tddapps.com/logo.png" alt="725 It works on my machine" />
     <h1>725</h1>
     <h2>It works on my machine</h2>
 </div>
