@@ -6,7 +6,7 @@ describe Formatter do
         input = StatusCodeInfo.new(725, "It works on my machine", "http://tddapps.com/logo.png")
         expected = %{---
 title: 725 - It works on my machine
-permalink: /725/
+permalink: /725
 ---
 <div>
     <img src="http://tddapps.com/logo.png" alt="725 - It works on my machine" />
