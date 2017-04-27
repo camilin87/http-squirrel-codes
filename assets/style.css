@@ -1,8 +1,22 @@
 body {
     font-size: large;
+    background-color: #333;
+    color: white;
 }
 
 ul {
     list-style: none;
     padding-left: 0;
+}
+
+a {
+    color: #ccc;
+}
+
+a:hover {
+    color: white;
+}
+
+.page-header a {
+    font-size: 1.8em;
 }
