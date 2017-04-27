@@ -31,15 +31,23 @@
         </p>
       </div>
 
-      <ul>
-        {% for page in site.pages %}
-          {% if page.title %}
-            <li>
-              <a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
-            </li>
-          {% endif %}
-        {% endfor %}
-      </ul>
+      {% assign var all_groups = "1,2,3,4,5" | split: ',' %}
+
+      {% for group_start in all_groups %}
+        <h2>{{group_start}}xx</h2>
+        <ul>
+          {% for page in site.pages %}
+            {% if page.title %}
+              {% assign var group = page.title | slice: 0 %}
+              {% if group == group_start %}
+                <li>
+                  <a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+                </li>
+              {% endif %}
+            {% endif %}
+          {% endfor %}
+        </ul>
+      {% endfor %}
     </div>
   </body>
 </html>
