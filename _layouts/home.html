@@ -40,7 +40,16 @@
       <div class="container">
         <div class="row">
           {% for group_start in all_groups %}
-            <div class="col-6 col-sm-3">
+            {% if group_start == "1" %}
+              <div class="col-6 col-sm-4">
+            {% endif %}
+
+            {% if group_start == "4" %}
+              </div>
+            {% endif %}
+
+            {% if group_start < "4" %}
+              
               <h2>{{group_start}}xx</h2>
               <ul>
                 {% for page in site.pages %}
@@ -54,7 +63,26 @@
                   {% endif %}
                 {% endfor %}
               </ul>
-            </div>
+
+            {% else %}
+
+              <div class="col-6 col-sm-4">
+                <h2>{{group_start}}xx</h2>
+                <ul>
+                  {% for page in site.pages %}
+                    {% if page.title %}
+                      {% assign var group = page.title | slice: 0 %}
+                      {% if group == group_start %}
+                        <li>
+                          <a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+                        </li>
+                      {% endif %}
+                    {% endif %}
+                  {% endfor %}
+                </ul>
+              </div>
+
+            {% endif %}
           {% endfor %}
         </div>
       </div>
