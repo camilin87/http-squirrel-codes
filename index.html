@@ -6,12 +6,13 @@ layout: home
 
   <div class="page-header">
     <h1>{{ site.title }}</h1>
-    <p>
+    <span class="pull-left">
       {{ site.description }}
-    </p>
-    <p class="text-right">
+    </span>
+    <span class="pull-right">
       built by <a href="https://www.tddapps.com">tddapps.com</a>
-    </p>
+    </span>
+    <span class="clearfix"></span>
   </div>
 
   {% assign var all_groups = "1,2,3,4,5" | split: ',' %}
