@@ -37,4 +37,4 @@ defaults:
             path: "_pages"
             type: pages
         values:
-            layout: status-code
+            layout: home
