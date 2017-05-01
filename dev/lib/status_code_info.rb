@@ -16,4 +16,8 @@ class StatusCodeInfo
     def filename
         "#{code}.md"
     end
+
+    def should_download_image
+        not url.include? "i.imgur.com"
+    end
 end
