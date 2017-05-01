@@ -1,3 +1,5 @@
+require "uri"
+
 class StatusCodeInfo
     attr_accessor :code
     attr_accessor :description
@@ -21,10 +23,20 @@ class StatusCodeInfo
         not url.include? "i.imgur.com"
     end
 
+    def image_filename
+        if should_download_image
+            img_extension = File.extname url
+            img_filename = "#{code}"
+            return "#{img_filename}#{img_extension}"
+        end
+
+        uri = URI.parse url
+        return File.basename uri.path
+    end
+
     def image_url
         if should_download_image
-            img_extension = File.extname(url)
-            return "/assets/img/code/#{code}#{img_extension}"
+            return "/assets/img/code/#{image_filename}"
         end
 
         url

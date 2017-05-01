@@ -13,6 +13,7 @@ describe StatusCodeInfo  do
 
         expect(input.should_download_image).to eq true
         expect(input.image_url).to eq "/assets/img/code/725.png"
+        expect(input.image_filename).to eq "725.png"
     end
 
     it "should not download the images from imgur" do
@@ -20,5 +21,6 @@ describe StatusCodeInfo  do
 
         expect(input.should_download_image).to eq false
         expect(input.image_url).to eq "https://i.imgur.com/p767VEv.jpg"
+        expect(input.image_filename).to eq "p767VEv.jpg"
     end
 end
