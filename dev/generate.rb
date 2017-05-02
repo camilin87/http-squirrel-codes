@@ -12,8 +12,9 @@ puts "output_dir: #{output_dir}"
 input_file_contents = IO.read input_file
 Parser
     .parse(input_file_contents)
+    .each {|s| s.site_root = output_dir }
     .each {|s|
-        output_file = s.filename_full_path output_dir
+        output_file = s.filename_full_path
         output_contents = Formatter.format s
 
         puts "Writing file: #{output_file}"

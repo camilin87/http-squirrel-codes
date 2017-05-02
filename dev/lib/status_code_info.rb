@@ -4,6 +4,7 @@ class StatusCodeInfo
     attr_accessor :code
     attr_accessor :description
     attr_accessor :url
+    attr_accessor :site_root
 
     def initialize(code, description, url)
         @code = code
@@ -50,13 +51,29 @@ class StatusCodeInfo
         File.join(output_dir, "assets/img/code/")
     end
 
-    def filename_full_path(output_dir)
-        pages_path = StatusCodeInfo.pages_path output_dir
+    def standardize_output_path(output_dir)
+        result = output_dir
+
+        if not output_dir
+            result = @site_root
+        end
+
+        if not result
+            raise ArgumentError, "No output path defined"
+        end
+
+        result
+    end
+
+    def filename_full_path(output_dir=nil)
+        output_base_path = standardize_output_path output_dir
+        pages_path = StatusCodeInfo.pages_path output_base_path
         File.join(pages_path, filename)
     end
 
-    def image_full_path(output_dir)
-        images_path = StatusCodeInfo.images_path output_dir
+    def image_full_path(output_dir=nil)
+        output_base_path = standardize_output_path output_dir
+        images_path = StatusCodeInfo.images_path output_base_path
         File.join(images_path, image_filename)
     end
 end

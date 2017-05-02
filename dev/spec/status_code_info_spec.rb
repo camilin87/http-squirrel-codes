@@ -26,12 +26,21 @@ describe StatusCodeInfo  do
 
     it "calculates the full paths of the files" do
         input = StatusCodeInfo.new(725, "It works on my machine", "http://tddapps.com/logo.png")
-        site_root = "/var/tmp/"
+        input.site_root = "/var/tmp/"
 
-        expect(StatusCodeInfo.pages_path site_root).to eq "/var/tmp/_pages/"
-        expect(input.filename_full_path site_root).to eq "/var/tmp/_pages/725.md"
+        expect(StatusCodeInfo.pages_path "/var/tmp/").to eq "/var/tmp/_pages/"
+        expect(input.filename_full_path).to eq "/var/tmp/_pages/725.md"
+        expect(input.filename_full_path "/var/tmp1/").to eq "/var/tmp1/_pages/725.md"
 
-        expect(StatusCodeInfo.images_path site_root).to eq "/var/tmp/assets/img/code/"
-        expect(input.image_full_path site_root).to eq "/var/tmp/assets/img/code/725.png"
+        expect(StatusCodeInfo.images_path "/var/tmp/").to eq "/var/tmp/assets/img/code/"
+        expect(input.image_full_path).to eq "/var/tmp/assets/img/code/725.png"
+        expect(input.image_full_path "/var/tmp1/").to eq "/var/tmp1/assets/img/code/725.png"
+    end
+
+    it "blows up when no path has been specified" do
+        input = StatusCodeInfo.new(725, "It works on my machine", "http://tddapps.com/logo.png")
+
+        expect {input.filename_full_path}.to raise_error ArgumentError
+        expect {input.image_full_path}.to raise_error ArgumentError
     end
 end
