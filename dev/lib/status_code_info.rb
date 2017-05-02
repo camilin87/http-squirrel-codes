@@ -24,15 +24,25 @@ class StatusCodeInfo
         not url.include? "i.imgur.com"
     end
 
-    def image_filename
-        if should_download_image
-            img_extension = File.extname url
-            img_filename = "#{code}"
-            return "#{img_filename}#{img_extension}"
-        end
-
+    def filename_from_url(url)
         uri = URI.parse url
         return File.basename uri.path
+    end
+
+    def image_filename
+        img_filename = "#{code}"
+        filename = filename_from_url url
+        img_extension = File.extname filename
+
+        if img_extension.length == 0
+            img_extension = ".jpg"
+        end
+
+        if not should_download_image
+            img_filename = File.basename(filename, File.extname(filename))
+        end
+
+        "#{img_filename}#{img_extension}"
     end
 
     def image_url
