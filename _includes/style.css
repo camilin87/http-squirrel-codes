@@ -82,6 +82,10 @@ a:hover {
 }
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    body {
+        background-color: black;
+    }
+
     .status-page-container > div {
         padding: 2px;
         max-width: 100%;

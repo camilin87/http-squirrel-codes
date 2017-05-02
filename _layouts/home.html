@@ -16,6 +16,9 @@
     <!-- <link rel="stylesheet" href="/assets/style.css" /> -->
     <style type="text/css">
         {% include style.css %}
+        {% if page.is_not_code_page %}
+            {% include non-status-code-only-style.css %}
+        {% endif %}
     </style>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
