@@ -16,10 +16,6 @@ def site_root
     File.expand_path("..", pwd)
 end
 
-def output_directory
-    File.join(site_root, "_pages/")
-end
-
 def generate(input_file, output_directory)
     sh "ruby generate.rb \"#{input_file}\" \"#{output_directory}\""
 end
@@ -50,5 +46,5 @@ end
 
 task :generate => [:clean] do
     input_file = File.join(pwd, "squirrels-source.md")
-    generate(input_file, output_directory)
+    generate(input_file, site_root)
 end

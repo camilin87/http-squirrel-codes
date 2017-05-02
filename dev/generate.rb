@@ -13,7 +13,7 @@ input_file_contents = IO.read input_file
 Parser
     .parse(input_file_contents)
     .each {|s|
-        output_file = File.join(output_dir, s.filename)
+        output_file = s.filename_full_path output_dir
         output_contents = Formatter.format s
 
         puts "Writing file: #{output_file}"
