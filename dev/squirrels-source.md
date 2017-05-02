@@ -39,7 +39,7 @@
 ###303 - See Other
 ![303 - See Other](https://i.imgur.com/PdLEDON.jpg)  
 ###304 - Not Modified
-![304 - Not Modified](https://media.gettyimages.com/photos/high-angle-view-of-squirrel-stretching-at-parco-del-valentino-picture-id593456375)  
+![304 - Not Modified](http://media.gettyimages.com/photos/high-angle-view-of-squirrel-stretching-at-parco-del-valentino-picture-id593456375)  
 ###305 - Use Proxy
 ![305 - Use Proxy](https://i.imgur.com/kwbuett.jpg)  
 ###306 - (Unused)
