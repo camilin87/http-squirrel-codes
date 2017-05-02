@@ -41,4 +41,22 @@ class StatusCodeInfo
 
         url
     end
+
+    def self.pages_path(output_dir)
+        File.join(output_dir, "_pages/")
+    end
+
+    def self.images_path(output_dir)
+        File.join(output_dir, "assets/img/code/")
+    end
+
+    def filename_full_path(output_dir)
+        pages_path = StatusCodeInfo.pages_path output_dir
+        File.join(pages_path, filename)
+    end
+
+    def image_full_path(output_dir)
+        images_path = StatusCodeInfo.images_path output_dir
+        File.join(images_path, image_filename)
+    end
 end
