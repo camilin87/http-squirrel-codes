@@ -67,3 +67,34 @@ a:hover {
     margin-bottom: 0;
 }
 
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    body {
+        background-color: black;
+    }
+
+    .status-page-container > div {
+        padding: 2px;
+        max-width: 100%;
+
+        border: none;
+
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .status-page-container img {
+        max-width: 99%;
+        max-height: 600px;
+
+        padding: 0.5%;
+        margin: 0.5%;
+    }
+
+    .status-page-container h1 {
+        font-size: 3em;
+    }
+
+    .status-page-container h2 {
+        font-size: 1.5em;
+    }
+}
