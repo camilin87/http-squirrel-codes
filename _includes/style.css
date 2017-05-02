@@ -21,6 +21,20 @@ a:hover {
     font-size: 1.8em;
 }
 
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    ul {
+        font-size: larger;
+    }
+
+    li {
+        padding: 0.2em;
+    }
+
+    .page-header a {
+        font-size: 1em;
+    }
+}
+
 /* individual status page style */
 
 .status-page-container {
@@ -68,10 +82,6 @@ a:hover {
 }
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
-    body {
-        background-color: black;
-    }
-
     .status-page-container > div {
         padding: 2px;
         max-width: 100%;
