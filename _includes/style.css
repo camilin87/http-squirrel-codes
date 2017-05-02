@@ -98,9 +98,9 @@ a:hover {
 
     .status-page-container img {
         max-width: 99%;
-        max-height: 800px;
+        max-height: 1000px;
 
-        padding: 0.5%;
+        padding: 0;
         margin: 0.5%;
     }
 
@@ -110,5 +110,18 @@ a:hover {
 
     .status-page-container h2 {
         font-size: 1.5em;
+    }
+
+    #code-description {
+        text-align:center;
+        position:fixed;
+        bottom:0px;
+        width:100%;
+
+        opacity: 0.9;
+        background-color: black;
+
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
     }
 }
