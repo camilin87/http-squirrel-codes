@@ -12,8 +12,11 @@ def pwd
     Dir.pwd
 end
 
+def site_root
+    File.expand_path("..", pwd)
+end
+
 def output_directory
-    site_root = File.expand_path("..", pwd)
     File.join(site_root, "_pages/")
 end
 
@@ -42,8 +45,7 @@ task :test_integration do
 end
 
 task :clean do
-    `rm -Rf #{output_directory}`
-    Dir.mkdir output_directory
+    sh "ruby clean.rb \"#{site_root}\""
 end
 
 task :generate => [:clean] do
