@@ -28,4 +28,5 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 
-gem 'bundler', '1.14.6'
+gem 'bundler', '~> 1.16.6'
+gem 'rake', '~> 11.2', '>= 11.2.2'
