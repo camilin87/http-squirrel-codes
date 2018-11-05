@@ -43,7 +43,7 @@
 ###305 - Use Proxy
 ![305 - Use Proxy](https://i.imgur.com/kwbuett.jpg)  
 ###306 - (Unused)
-![306 - (Unused)](http://boboettingandassociates.com/wp-content/uploads/2017/02/animal-ruin-car.jpg)  
+![306 - (Unused)](https://i.imgur.com/hpWufel.jpg)  
 ###307 - Temporary Redirect
 ![307 - Temporary Redirect](https://i.imgur.com/EqvvqNm.jpg)  
 
@@ -52,7 +52,7 @@
 ###400 - Bad Request
 ![400 - Bad Request](https://i.imgur.com/V75nGLB.jpg)  
 ###401 - Unauthorized
-![401 - Unauthorized](https://i.redd.it/62g16w312dpy.jpg)  
+![401 - Unauthorized](https://i.imgur.com/XAfzw4i.jpg)  
 ###402 - Payment Required
 ![402 - Payment Required](https://i.imgur.com/Z2IgKOL.jpg)  
 ###403 - Forbidden
