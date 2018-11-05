@@ -85,6 +85,8 @@
 ![416 - Requested Range Not Satisfiable](http://i.dailymail.co.uk/i/pix/2010/05/27/article-0-09C69FED000005DC-363_634x374.jpg)  
 ###417 - Expectation Failed
 ![417 - Expectation Failed](https://i.imgur.com/T8R2iqU.jpg)  
+###418 - I'm a teapot
+![418 - I'm a teapot](https://farm6.static.flickr.com/5334/30131715603_c545d3f826_b.jpg)  
 
 ## 5xx  
 
