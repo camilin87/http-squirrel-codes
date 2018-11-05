@@ -29,7 +29,8 @@ task :test_integration do
 
         generate(input_file, temp_dir)
 
-        Dir.chdir(temp_dir) {
+        pages_dir = File.join(temp_dir, "_pages/")
+        Dir.chdir(pages_dir) {
             found_files = Dir["*"].sort
             expected_files = ["100.md", "101.md"]
 

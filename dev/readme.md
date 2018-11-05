@@ -6,8 +6,8 @@
 
 ## Running the tests  
 
-    rake t
+    bundle exec rake t
 
 ## Generating the site  
 
-    rake
+    bundle exec rake
